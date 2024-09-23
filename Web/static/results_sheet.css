@@ -1,0 +1,86 @@
+.container {
+    width: 600px;
+    height: auto;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png);
+
+    position: absolute; /*Can also be `fixed`*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: 25px;
+    border: 0px solid #000000;
+    padding: 20px;
+
+    /*box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;*/
+}
+body{
+	background: #000000;
+  }
+
+h1{
+    font-family: "Rubik";
+    color:rgb(255, 255, 255);
+    font-size: 60px;
+    margin-block-end: 0.1cm;
+    
+}
+
+p1{
+font-family: "Rubik";
+color:white;
+}
+
+/*<button class="button-54" role="button">Button 54</button>*/
+
+.buttonclass {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.buttonclass:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+
+.button2 {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #000000; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    transition: .3s;
+  }
